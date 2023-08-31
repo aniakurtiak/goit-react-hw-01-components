@@ -24,7 +24,11 @@ export const App = () => {
       />
       <Statistics stats={data} />
       <FriendList friends={friends} />
-      <FriendListItem />
+      <FriendListItem
+        avatar={friends.avatar}
+        name={friends.name}
+        isOnline={friends.isOnline}
+      />
       <TransactionHistory items={transactions} />
     </div>
   );

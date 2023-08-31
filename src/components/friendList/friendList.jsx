@@ -1,4 +1,4 @@
-export const FriendList = () => {
+export const FriendList = ({friends}) => {
     return (
         <div>FriendList</div>
     );

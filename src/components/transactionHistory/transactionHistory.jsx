@@ -1,4 +1,4 @@
-export const TransactionHistory = () => {
+export const TransactionHistory = ({transactions}) => {
     return (
         <div>TransactionHistory</div>
     );
