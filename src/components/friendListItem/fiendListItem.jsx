@@ -1,14 +1,11 @@
-export const FriendListItem = ({friends}) => {
+export const FriendListItem = ({listItem}) => {
     return (
-        <ul className="friend-list">
-            {friends.map(friend => (
-                <li key={friend.id}>
-                    <span className="status">{friend.isOnline}</span>
-                    <img className="avatar" src={friend.avatar} alt="User avatar" width="48" />
-                    <p className="name">{friend.name}</p>
-               </li>
-            ))}
-</ul>
+        <div>
+            <span className="status">{listItem.isOnline}</span>
+            <img className="avatar" src={listItem.avatar} alt="User avatar" width="48" />
+            <p className="name">{listItem.name}</p>
+        </div>
+        
     );
 }
 
