@@ -1,9 +1,9 @@
-export const FriendListItem = ({listItem}) => {
+export const FriendListItem = ({listItem: {isOnline, avatar, name}}) => {
     return (
         <div>
-            <span className="status">{listItem.isOnline}</span>
-            <img className="avatar" src={listItem.avatar} alt="User avatar" width="48" />
-            <p className="name">{listItem.name}</p>
+            <span className="status">{isOnline}</span>
+            <img className="avatar" src={avatar} alt="User avatar" width="48" />
+            <p className="name">{name}</p>
         </div>
         
     );
