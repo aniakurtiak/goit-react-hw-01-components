@@ -1,30 +1,32 @@
+import {ListStats, StatsItem, Wrapper, Photo, Decription, Name} from "./profile.styled.js"
+
 export const Profile = ({username, tag, location, avatar, stats}) => {
     return (
-        <div className="profile">
-            <div className="description">
-                <img
+        <Wrapper>
+            <Decription>
+                <Photo
                 src= {avatar}
                 alt="User avatar"
                 className="avatar"
                 />
-                <p className="name">{username}</p>
+                <Name>{username}</Name>
                 <p className="tag">@{tag}</p>
                 <p className="location">{location}</p>
-            </div>
-            <ul className="stats">
-                <li>
+            </Decription>
+            <ListStats className="stats">
+                <StatsItem>
                     <span className="label">Followers</span>
                     <span className="quantity">{stats.followers}</span>
-                </li>
-                <li>
+                </StatsItem>
+                <StatsItem>
                     <span className="label">Views</span>
                     <span className="quantity">{stats.views}</span>
-                </li>
-                <li>
+                </StatsItem>
+                <StatsItem>
                     <span className="label">Likes</span>
                     <span className="quantity">{stats.likes}</span>
-                </li>
-            </ul>
-        </div>
+                </StatsItem>
+            </ListStats>
+        </Wrapper>
     )
 };
