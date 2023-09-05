@@ -1,17 +1,17 @@
-import {List, ListItem, Wrapper} from "./statistics.styled";
+import {List, ListItem, Wrapper, Percent, Title} from "./statistics.styled";
 
 export const Statistics = ({title = null, stats}) => {
     return (
-        <Wrapper className="statistics">
-            <h2 className="title">{title}</h2>
-            <List className="stat-list">
+        <Wrapper >
+            <Title>{title}</Title>
+            <List>
                 {stats.map(stat=> (
                     <ListItem key={stat.id} color = 'getRandomColor'>
-                        <span className="label">{stat.label}</span>
-                        <span className="percentage">{stat.percentage}</span>
+                        <span>{stat.label}</span>
+                        <Percent>{stat.percentage}%</Percent>
                     </ListItem>
                 ))}
             </List>
         </Wrapper>
     );
-}
+} 

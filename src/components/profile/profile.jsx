@@ -1,4 +1,4 @@
-import {ListStats, StatsItem, Wrapper, Photo, Decription, Name} from "./profile.styled.js"
+import {ListStats, StatsItem, Wrapper, Photo, Decription, Name, Numbers} from "./profile.styled.js"
 
 export const Profile = ({username, tag, location, avatar, stats}) => {
     return (
@@ -7,24 +7,23 @@ export const Profile = ({username, tag, location, avatar, stats}) => {
                 <Photo
                 src= {avatar}
                 alt="User avatar"
-                className="avatar"
                 />
                 <Name>{username}</Name>
-                <p className="tag">@{tag}</p>
-                <p className="location">{location}</p>
+                <p>@{tag}</p>
+                <p>{location}</p>
             </Decription>
-            <ListStats className="stats">
+            <ListStats>
                 <StatsItem>
-                    <span className="label">Followers</span>
-                    <span className="quantity">{stats.followers}</span>
+                    <span>Followers</span>
+                    <Numbers>{stats.followers}</Numbers>
                 </StatsItem>
                 <StatsItem>
-                    <span className="label">Views</span>
-                    <span className="quantity">{stats.views}</span>
+                    <span>Views</span>
+                    <Numbers>{stats.views}</Numbers>
                 </StatsItem>
                 <StatsItem>
-                    <span className="label">Likes</span>
-                    <span className="quantity">{stats.likes}</span>
+                    <span>Likes</span>
+                    <Numbers>{stats.likes}</Numbers>
                 </StatsItem>
             </ListStats>
         </Wrapper>

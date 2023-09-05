@@ -40,7 +40,11 @@ display: flex;
 flex-direction: column;
 align-items: center;
 gap: 10px;
-
 font-size: 16px;
-margin: 20px;
+padding: 20px;
+`;
+
+export const Numbers = styled.span`
+font-size: 20px;
+font-weight: 700;
 `;

@@ -1,22 +1,24 @@
+import {TabData, TabTitles, TabElement} from "./transactionHistory.styled.js"
+
 export const TransactionHistory = ({items}) => {
     return (
-        <table className="transaction-history">
-            <thead>
+        <TabData>
+            <TabTitles>
                 <tr>
                 <th>Type</th>
                 <th>Amount</th>
                 <th>Currency</th>
                 </tr>
-            </thead>
+            </TabTitles>
             <tbody>
                 {items.map(item => (
                     <tr key={item.id}>   
-                        <td>{item.type}</td>
-                        <td>{item.amount}</td>
-                        <td>{item.currency}</td>
+                        <TabElement>{item.type}</TabElement>
+                        <TabElement>{item.amount}</TabElement>
+                        <TabElement>{item.currency}</TabElement>
                     </tr>
                 ))}
             </tbody>
-        </table>
+        </TabData>
     );
 }
